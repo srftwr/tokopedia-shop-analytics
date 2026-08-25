@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 520px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    padding: 16px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1db854;
+    padding-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #222;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f0f0f0;
+    border-top: 4px solid #1db854;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 12px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Status Section */
+.status-section {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-left: 4px solid #1db854;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.status-indicator {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+#status-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Mode Buttons */
+.modes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.mode-btn {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #666;
+}
+
+.mode-btn:hover {
+    border-color: #1db854;
+    color: #1db854;
+}
+
+.mode-btn.active {
+    background: #1db854;
+    color: white;
+    border-color: #1db854;
+}
+
+/* Mode Content */
+.mode-content {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    min-height: 140px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.mode-panel {
+    display: none;
+}
+
+.mode-panel.active {
+    display: block;
+}
+
+.mode-panel h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #222;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.mode-panel p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.mode-panel strong {
+    color: #222;
+}
+
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+}
+
+.metric-item:last-child {
+    border-bottom: none;
+}
+
+.metric-label {
+    color: #666;
+    font-weight: 500;
+}
+
+.metric-value {
+    font-weight: 700;
+    color: #1db854;
+}
+
+.alert {
+    background: #fff3cd;
+    border-left: 3px solid #ffc107;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #856404;
+}
+
+.alert.danger {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+    color: #721c24;
+}
+
+.alert.success {
+    background: #d4edda;
+    border-left-color: #28a745;
+    color: #155724;
+}
+
+.strategy-item {
+    background: #e8f5e9;
+    border-left: 3px solid #1db854;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #1b5e20;
+}
+
+.strategy-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Button Analisa */
+.analyze-btn {
+    width: 100%;
+    padding: 10px;
+    background: #1db854;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.analyze-btn:hover {
+    background: #17a347;
+}
+
+.analyze-btn:active {
+    transform: scale(0.98);
+}
+
+/* Error Message */
+.error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.error p {
+    color: #721c24;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.error small {
+    color: #856404;
+    font-size: 12px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+    .modes {
+        grid-template-columns: 1fr;
+    }
+}
