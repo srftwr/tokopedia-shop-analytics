@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Tokopedia Shop Analytics",
+  "version": "1.0.0",
+  "description": "Analisis data Toko Tokopedia dalam bahasa manusia - tingkatkan penjualan sandal Anda",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "webRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://seller-id.tokopedia.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tokopedia Shop Analytics"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://seller-id.tokopedia.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
