@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokopedia Shop Analytics</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 ANALISA TOKO</h1>
+            <p class="subtitle">Strategi Penjualan Sandal yang Lebih Smart</p>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Membaca data dashboard Anda...</p>
+        </div>
+
+        <div id="analysis-result" class="analysis-result hidden">
+            <!-- Kondisi Status -->
+            <div class="status-section">
+                <div id="status-indicator" class="status"></div>
+                <div id="status-text"></div>
+            </div>
+
+            <!-- Mode Analisis -->
+            <div class="modes">
+                <button class="mode-btn active" data-mode="overview">📊 DATA</button>
+                <button class="mode-btn" data-mode="analysis">🔍 ANALISIS</button>
+                <button class="mode-btn" data-mode="problem">⚠️ MASALAH</button>
+                <button class="mode-btn" data-mode="strategy">🎯 STRATEGI</button>
+            </div>
+
+            <!-- Konten Analisis -->
+            <div id="mode-content" class="mode-content">
+                <div id="overview" class="mode-panel active">
+                    <h3>Data Penjualan Hari Ini</h3>
+                    <div id="overview-content"></div>
+                </div>
+
+                <div id="analysis" class="mode-panel">
+                    <h3>Kondisi Toko Anda</h3>
+                    <div id="analysis-content"></div>
+                </div>
+
+                <div id="problem" class="mode-panel">
+                    <h3>Apa Yang Perlu Diperbaiki?</h3>
+                    <div id="problem-content"></div>
+                </div>
+
+                <div id="strategy" class="mode-panel">
+                    <h3>Strategi Pengembangan Sandal</h3>
+                    <div id="strategy-content"></div>
+                </div>
+            </div>
+
+            <button id="analyze-btn" class="analyze-btn">🔄 ANALISA ULANG</button>
+        </div>
+
+        <div id="error-message" class="error hidden">
+            <p>⚠️ Tidak bisa membaca data</p>
+            <small>Pastikan Anda berada di halaman Data Overview Tokopedia Seller Centre</small>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
